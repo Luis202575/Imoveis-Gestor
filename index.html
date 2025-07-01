@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+# HTML com os caminhos locais para imagens
+html_local_images = """<!DOCTYPE html>
 <html lang="pt">
 <head>
   <meta charset="UTF-8" />
@@ -41,7 +42,7 @@
   <section class="cta">
     <h2>Fale com um Especialista Agora</h2>
     <p>Preencha os dados abaixo e comece hoje mesmo o seu processo de compra ou venda em Gondomar, Porto, Maia ou Vila Nova de Gaia.</p>
-    <form action="https://formspree.io/f/xyzjnzrk" method="POST">
+    <form action="formulario_imobiliario.php" method="POST">
       <input type="text" name="nome" placeholder="Seu nome" required />
       <input type="email" name="email" placeholder="Seu e-mail" required />
       <input type="tel" name="telemovel" placeholder="Telemóvel (opcional)" />
@@ -68,9 +69,8 @@
   <section class="properties">
     <h3>Imóveis em Destaque</h3>
     <div class="property-list">
-
       <a class="property-card" href="https://wa.me/351910313353?text=Olá!%20Tenho%20interesse%20neste%20imóvel%20(Imagem%201)." target="_blank">
-        <img class="property-image" src="https://drive.google.com/uc?export=view&id=1LzwzJgHhff2cn-n2N0pzvJlgCUB9i4gr" alt="Imóvel 1" />
+        <img class="property-image" src="imagens/imovel1.jpg" alt="Imóvel 1" />
         <div class="property-info">
           <h4>Imóvel com Excelente Localização</h4>
           <p>Ideal para habitação própria ou investimento. Boa exposição solar e acessos rápidos.</p>
@@ -81,9 +81,8 @@
           <p class="property-price">€230,000</p>
         </div>
       </a>
-
       <a class="property-card" href="https://wa.me/351910313353?text=Olá!%20Tenho%20interesse%20neste%20imóvel%20(Imagem%202)." target="_blank">
-        <img class="property-image" src="https://drive.google.com/uc?export=view&id=1NMJGNf27kQQsf-Y5qbzaL5AMdoL2iAmm" alt="Imóvel 2" />
+        <img class="property-image" src="imagens/imovel2.jpg" alt="Imóvel 2" />
         <div class="property-info">
           <h4>Apartamento T2 Renovado</h4>
           <p>Acabamentos modernos, pronto a habitar. Ideal para famílias jovens.</p>
@@ -94,9 +93,8 @@
           <p class="property-price">€165,000</p>
         </div>
       </a>
-
       <a class="property-card" href="https://wa.me/351910313353?text=Olá!%20Tenho%20interesse%20neste%20terreno%20(Imagem%203)." target="_blank">
-        <img class="property-image" src="https://drive.google.com/uc?export=view&id=1-gSfmhtqBIdu9_5yYcp8FOF6qUeO_ib-" alt="Terreno com Potencial" />
+        <img class="property-image" src="imagens/terreno1.jpg" alt="Terreno com Potencial" />
         <div class="property-info">
           <h4>Terreno com Potencial de Construção</h4>
           <p>Terreno amplo com acesso direto à estrada. Ideal para moradia unifamiliar ou projeto de investimento.</p>
@@ -107,7 +105,6 @@
           <p class="property-price">€120,000</p>
         </div>
       </a>
-
     </div>
   </section>
 
@@ -116,3 +113,10 @@
   </footer>
 </body>
 </html>
+"""
+
+# Guardar o ficheiro HTML com imagens locais
+file_path = Path("/mnt/data/imobiliaria_local.html")
+file_path.write_text(html_local_images, encoding="utf-8")
+
+file_path.name
