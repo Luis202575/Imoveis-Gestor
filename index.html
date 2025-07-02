@@ -1,10 +1,15 @@
-# HTML com os caminhos locais para imagens
-html_local_images = """<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Compre ou Venda o Seu Imóvel com Segurança</title>
+
+  <title>Gestor de Imóveis | Compra e Venda em Gondomar, Porto, Maia e Gaia</title>
+
+  <meta name="description" content="Plataforma intuitiva para gestão de imóveis nas zonas de Gondomar, Porto, Maia e Vila Nova de Gaia. Adicione, edite e visualize propriedades com segurança e eficiência.">
+  <meta name="keywords" content="gestão de imóveis, Gondomar, Porto, Maia, Gaia, propriedades, comprar imóvel, vender imóvel, consultor imobiliário">
+  <meta name="author" content="Luís">
+
   <style>
     body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f5f5f5; color: #333; }
     .hero { background: url('https://images.unsplash.com/photo-1568605114967-8130f3a36994') no-repeat center center/cover; color: white; text-align: center; padding: 100px 20px; }
@@ -113,10 +118,3 @@ html_local_images = """<!DOCTYPE html>
   </footer>
 </body>
 </html>
-"""
-
-# Guardar o ficheiro HTML com imagens locais
-file_path = Path("/mnt/data/imobiliaria_local.html")
-file_path.write_text(html_local_images, encoding="utf-8")
-
-file_path.name
