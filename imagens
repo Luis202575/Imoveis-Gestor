@@ -1,1 +1,13 @@
+# Clona o repositório (se ainda não tiveres)
+git clone https://github.com/Luis202575/Imoveis-Gestor.git
+cd Imoveis-Gestor
+
+# Move as imagens para a pasta
+mkdir -p imagens
+mv *.png imagens/
+
+# Confirma as mudanças
+git add .
+git commit -m "Mover imagens para a pasta imagens"
+git push origin main
 
